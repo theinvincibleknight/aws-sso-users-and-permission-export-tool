@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """
 AWS IAM Identity Center (SSO) Permissions Export Script
-Exports user permissions to CSV/Excel format matching your template
 """
 
 import boto3
