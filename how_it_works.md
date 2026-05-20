@@ -56,7 +56,7 @@
 
 ---
 
-## Script Explained Block by Block
+## Explaination
 
 ### Block 1: Imports and Configuration
 
