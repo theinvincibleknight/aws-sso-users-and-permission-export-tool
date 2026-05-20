@@ -1,0 +1,53 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "SSOAdminReadAccess",
+      "Effect": "Allow",
+      "Action": [
+        "sso:ListInstances",
+        "sso:ListPermissionSetsProvisionedToAccount",
+        "sso:DescribePermissionSet",
+        "sso:ListManagedPoliciesInPermissionSet",
+        "sso:ListCustomerManagedPolicyReferencesInPermissionSet",
+        "sso:ListAccountAssignments"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "IdentityStoreReadAccess",
+      "Effect": "Allow",
+      "Action": [
+        "identitystore:ListUsers"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "OrganizationsReadAccess",
+      "Effect": "Allow",
+      "Action": [
+        "organizations:ListAccounts",
+        "organizations:DescribeAccount"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "S3WriteAccess",
+      "Effect": "Allow",
+      "Action": [
+        "s3:PutObject"
+      ],
+      "Resource": "arn:aws:s3:::aws-sso-users-and-permission-exporter/*"
+    },
+    {
+      "Sid": "CloudWatchLogsAccess",
+      "Effect": "Allow",
+      "Action": [
+        "logs:CreateLogGroup",
+        "logs:CreateLogStream",
+        "logs:PutLogEvents"
+      ],
+      "Resource": "arn:aws:logs:*:*:*"
+    }
+  ]
+}
